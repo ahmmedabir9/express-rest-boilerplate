@@ -1,0 +1,3 @@
+node_modules
+uploads/**
+!uploads/LOCAL_FILE_UPLOADS
