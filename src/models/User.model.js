@@ -24,7 +24,7 @@ var UserSchema = Schema({
   photo: {
     type: String,
   },
-});
+}, {timestamps: true});
 
 const User = model("user", UserSchema);
 
