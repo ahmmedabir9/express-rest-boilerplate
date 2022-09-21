@@ -1,4 +1,4 @@
-const { Router } = require("express");
+const { Router } = require('express')
 const {
   getUsers,
   getUserDetails,
@@ -6,19 +6,19 @@ const {
   updateStatus,
   deleteUser,
   createUser,
-} = require("../controllers/user.controller");
-const { isUser, isAdmin } = require("../utils/protected");
+} = require('../controllers/user.controller')
+const { isUser, isAdmin } = require('../utils/protected')
 
-const router = Router();
+const router = Router()
 
 //api: url/course/__
 
 //Subscription
-router.post("/create", isAdmin, createUser);
-router.post("/", getUsers);
-router.get("/:id", getUserDetails);
-router.put("/update/:id", isUser, updateUserDetails);
-router.put("/update-status/:id", isAdmin, updateStatus);
-router.post("/delete/:id", isAdmin, deleteUser);
+router.post('/create', createUser)
+router.post('/', getUsers)
+router.get('/:id', getUserDetails)
+router.put('/update/:id', isUser, updateUserDetails)
+router.put('/update-status/:id', isAdmin, updateStatus)
+router.post('/delete/:id', isAdmin, deleteUser)
 
-module.exports = router;
+module.exports = router
