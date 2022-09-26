@@ -1,7 +1,8 @@
 {
   "name": "express-rest-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Minimal Starter Boilerplate for NodeJS REST API with ExpressJS & MongoDB.",
+  "bin": "./bin/cli.js",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
