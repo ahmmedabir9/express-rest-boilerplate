@@ -1,7 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
-const { User } = require("../models/User.model");
-const { response } = require("../utils/response");
-const { securePassword } = require("../utils/securePassword");
+const { User } = require("../../models/User.model");
+const { response } = require("../../utils/response");
+const { securePassword } = require("../../utils/securePassword");
 
 const createUser = async (req, res) => {
  const { name, email, password, mobile, photo, userType } = req.body;

@@ -1,25 +1,14 @@
-const { User } = require("../models/User.model");
+const { User } = require("../../models/User.model");
 const { compare } = require("bcrypt");
-const { createToken } = require("../utils/config");
-const { verifyToken } = require("../utils/protected");
+const { createToken } = require("../../utils/config");
+const { verifyToken } = require("../../utils/protected");
 const { StatusCodes } = require("http-status-codes");
-const { response } = require("../utils/response");
-const { securePassword } = require("../utils/securePassword");
+const { response } = require("../../utils/response");
+const { securePassword } = require("../../utils/securePassword");
 
 //register new account
 const register = async (req, res) => {
  const { email, password, name, mobile } = req.body;
-
- if (!email || !password || !name || !mobile) {
-  return response(
-   res,
-   StatusCodes.BAD_REQUEST,
-   false,
-   {},
-   "Could not register, Please Provide all information"
-  );
- }
-
  try {
   const oldUser = await User.findOne({
    email: email,
@@ -31,15 +20,6 @@ const register = async (req, res) => {
     false,
     {},
     "This Email Already have an Account"
-   );
-  }
-  if (password.length < 6) {
-   return response(
-    res,
-    StatusCodes.NOT_ACCEPTABLE,
-    false,
-    {},
-    "Password must be minimum 6 charecter"
    );
   }
 
