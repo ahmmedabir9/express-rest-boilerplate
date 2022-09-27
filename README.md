@@ -1,17 +1,14 @@
-
 # Express Rest Boilerplate
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
 A Minimal Starter Boilerplate for NodeJS REST API with ExpressJS & MongoDB.
 
-
 ## Tech Stack
 
 **Language:** JavaScript <br/>
 **Server:** NodeJS, ExpressJS <br/>
 **Database:** MongoDB <br/>
-
 
 ## Project Structure
 
@@ -44,6 +41,7 @@ express-rest-boilerplate
  ┣ server.js
  ┗ yarn.lock
 ```
+
 ## How to use?
 
 To use the boilerplate you have to clone the repository first. To clone the repository using the command given.
@@ -51,21 +49,25 @@ To use the boilerplate you have to clone the repository first. To clone the repo
 ```bash
 git clone https://github.com/ahmmedabir9/express-rest-boilerplate.git
 ```
-    
+
 ## How to install?
+
 To install the boilerplate your device must have **NodeJS** installed. To check your device contains **NodeJS** use the following command on your **command prompt**.
 
 For windows:
+
 ```bash
 node -v
 ```
 
 For mac:
+
 ```bash
 node -v
 ```
 
 For linux:
+
 ```bash
 node -v
 ```
@@ -84,10 +86,10 @@ After completing the installation of **NodeJS**, please clone the project with t
   cd express-rest-boilerplate
 ```
 
-If you are using **npm* then use
+If you are using \*_npm_ then use
 
 ```bash
-  npm i 
+  npm i
 ```
 
 Or if you are using **yarn** then use
@@ -97,19 +99,21 @@ Or if you are using **yarn** then use
 ```
 
 ## Connect with database
+
 To connect with MongoDB please go to the **src** folder then open **config** folder.
 
 ```bash
   cd src
   cd config
 ```
+
 and open database file and add your database connection string like below.
 
 ```js
-  module.exports = {
-  database: "mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]",
-  };
-
+module.exports = {
+  database:
+    "mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]",
+};
 ```
 
 ## How to run?
@@ -117,7 +121,7 @@ and open database file and add your database connection string like below.
 For development environment:
 
 ```bash
-  npm dev
+  npm run dev
 ```
 
 For production environment:
@@ -129,12 +133,13 @@ For production environment:
 ## PORT
 
 In the development server by default, it will open at port **5000**, and in the production server, it will open in the server's default port.
+
 ## Authors
 
 - [@ahmmedabir9](https://github.com/ahmmedabir9)
 
-
 ## Contributors
+
 <a href="https://github.com/ahmmedabir9/express-rest-boilerplate/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=ahmmedabir9/express-rest-boilerplate" />
 </a>
