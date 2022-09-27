@@ -1,8 +1,8 @@
-const { execSync } = require('node:child_process')
+const childProcess = require('child_process')
 
 const runCommand = (command) => {
   try {
-    execSync(`${command}`, { sudo: 'inherit' })
+    childProcess.exec(`${command}`, { sudo: 'inherit' })
   } catch (err) {
     console.log(`Failed to execute ${command}`, e)
     return false
