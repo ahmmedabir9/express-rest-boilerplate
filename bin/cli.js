@@ -1,36 +1,45 @@
 #!/usr/bin/env node
-const { execSync } = require('node:child_process')
+const { execSync } = require("node:child_process");
+const figlet = require("figlet");
 
 const runCommand = (command) => {
   try {
-    execSync(`${command}`, { sudo: 'inherit' })
-    return true
+    execSync(`${command}`, { sudo: "inherit" });
+    return true;
   } catch (err) {
-    console.log(`Failed to execute ${command}`, e)
-    return false
+    console.log(`Failed to execute ${command}`, e);
+    return false;
   }
-}
+};
+figlet("Congratuations!!", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
 
-const repoName = process.argv[2] || 'express-mongo-boilerplate'
-const gitCheckoutCommand = `git clone --depth 1 https://github.com/ahmmedabir9/express-rest-boilerplate.git ${repoName}`
-const installDepsCom = `cd ${repoName} && npm install`
-const removeTemplateFileCommands = `cd ${repoName} && rm -r bin .git`
+const repoName = process.argv[2] || "express-mongo-boilerplate";
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/ahmmedabir9/express-rest-boilerplate.git ${repoName}`;
+const installDepsCom = `cd ${repoName} && npm install`;
+const removeTemplateFileCommands = `cd ${repoName} && rm -r bin .git`;
 
-console.log(`Cloning the repository with the name ${repoName}`)
-const checkout = runCommand(gitCheckoutCommand)
+console.log(`Cloning the repository with the name ${repoName}`);
+const checkout = runCommand(gitCheckoutCommand);
 
-if (!checkout) process.exit(-1)
+if (!checkout) process.exit(-1);
 
-const removeTemplateFolders = runCommand(removeTemplateFileCommands)
+const removeTemplateFolders = runCommand(removeTemplateFileCommands);
 
-if (!removeTemplateFolders) process.exit(-1)
+if (!removeTemplateFolders) process.exit(-1);
 
-console.log(`Installing dependencies for ${repoName}`)
-const installedDeps = runCommand(installDepsCom)
+console.log(`Installing dependencies for ${repoName}`);
+const installedDeps = runCommand(installDepsCom);
 
-if (!installedDeps) process.exit(-1)
+if (!installedDeps) process.exit(-1);
 
-console.log(
-  `Congratulations! You are ready. Follow the following commands to sart.`,
-)
-console.log(`cd ${repoName} && npm start`)
+console.log(`A boiler plate  by group of Software Engineer from Implevista`);
+const openCode = `cd ${repoName} && code .`;
+
+runCommand(openCode);
