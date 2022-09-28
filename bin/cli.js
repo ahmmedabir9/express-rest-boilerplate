@@ -14,11 +14,16 @@ const runCommand = (command) => {
 const repoName = process.argv[2] || 'express-mongo-boilerplate'
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/ahmmedabir9/express-rest-boilerplate.git ${repoName}`
 const installDepsCom = `cd ${repoName} && npm install`
+const removeTemplateFileCommands = `cd ${repoName} && rm -r bin .git`
 
 console.log(`Cloning the repository with the name ${repoName}`)
 const checkout = runCommand(gitCheckoutCommand)
 
 if (!checkout) process.exit(-1)
+
+const removeTemplateFolders = runCommand(removeTemplateFileCommands)
+
+if (!removeTemplateFolders) process.exit(-1)
 
 console.log(`Installing dependencies for ${repoName}`)
 const installedDeps = runCommand(installDepsCom)
