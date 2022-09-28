@@ -1,17 +1,17 @@
 #!/usr/bin/env node
-
-const childProcess = require('child_process')
+const { execSync } = require('node:child_process')
 
 const runCommand = (command) => {
   try {
-    childProcess.exec(`${command}`, { sudo: 'inherit' })
+    execSync(`${command}`, { sudo: 'inherit' })
+    return true
   } catch (err) {
     console.log(`Failed to execute ${command}`, e)
     return false
   }
 }
 
-const repoName = process.argv[2]
+const repoName = process.argv[2] || 'express-mongo-boilerplate'
 const gitCheckoutCommand = `git clone --depth 1 https://github.com/ahmmedabir9/express-rest-boilerplate.git ${repoName}`
 const installDepsCom = `cd ${repoName} && npm install`
 
