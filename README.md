@@ -45,40 +45,6 @@ express-rest-boilerplate
  ┣ package.json
  ┣ README.md
  ┣ server.js
- ┗ yarn.lockexpress-rest-boilerplate
- ┣ bin
- ┃ ┗ cli.js
- ┣ src
- ┃ ┣ config
- ┃ ┃ ┗ conn.js
- ┃ ┣ controllers
- ┃ ┃ ┣ auth
- ┃ ┃ ┃ ┣ auth.controller.js
- ┃ ┃ ┃ ┗ auth.validator.js
- ┃ ┃ ┣ user
- ┃ ┃ ┃ ┣ user.controller.js
- ┃ ┃ ┃ ┗ user.validator.js
- ┃ ┃ ┗ file.controller.js
- ┃ ┣ models
- ┃ ┃ ┗ User.model.js
- ┃ ┣ routes
- ┃ ┃ ┣ auth.routes.js
- ┃ ┃ ┣ file.routes.js
- ┃ ┃ ┗ user.routes.js
- ┃ ┣ utils
- ┃ ┃ ┣ config.js
- ┃ ┃ ┣ protected.js
- ┃ ┃ ┣ response.js
- ┃ ┃ ┗ securePassword.js
- ┃ ┗ view
- ┃ ┃ ┗ serverRunning.html
- ┣ uploads
- ┃ ┗ LOCAL_FILE_UPLOADS
- ┣ .gitignore
- ┣ LICENCE
- ┣ package.json
- ┣ README.md
- ┣ server.js
  ┗ yarn.lock
 ```
 
@@ -108,8 +74,8 @@ and open database file and add your database connection string like below.
 ```js
 module.exports = {
   database:
-    "mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]",
-};
+    'mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]',
+}
 ```
 
 ## How to run?
