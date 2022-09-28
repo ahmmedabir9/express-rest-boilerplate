@@ -1,8 +1,8 @@
 const { connect } = require("mongoose");
 
-const dbConnStr = "";
+const dbConnectionString = "";
 
-connect(dbConnStr, {
+connect(dbConnectionString, {
  useNewUrlParser: true,
  useUnifiedTopology: true,
 })
