@@ -1,6 +1,10 @@
 {
   "name": "express-mongo-boilerplate",
   "version": "1.0.5",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmmedabir9/express-rest-boilerplate.git"
+  },
   "description": "A Minimal Starter Boilerplate for NodeJS REST API with ExpressJS & MongoDB.",
   "bin": "./bin/cli.js",
   "main": "server.js",
